@@ -1,7 +1,7 @@
 # Data Analysis with R: Bellabeat Case Study
 Capstone project completed as part of my Google Data Analytics Certificate. 
 
-## Project Description
+## Project Overview
 
 ### Scenario
 Bellabeat is a high-tech manufacturer of health-focused products for women. Urška Sršen, co-founder and
