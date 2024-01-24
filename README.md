@@ -13,7 +13,11 @@
 
 ## Project Overview
 
+---
+
 Completed as part of my Google Data Analytics Certificate, this data analysis project aimed to analyze smart device fitness data to provide insights into how non-consumers of a high-tech manufacturer of health-focused products for women use smart devices. By analyzing various aspects of usage data, the business task was to identify trends, make data-driven recommendations, and inform the company's marketing strategy.
+
+![scatter-plot-2](https://github.com/cikasm/cintia-s_portfolio/assets/139472104/8d9dfef3-8bc0-4e4d-b7d3-f36fe0e8bc73)
 
 ### Data Sources
 
@@ -110,6 +114,7 @@ were more active in terms of steps were likely to spend less time in a sedentary
 ggplot(data=Daily_Activity_Data, aes(x=Total_Steps, y=Sedentary_Minutes,
 color=Total_Steps)) + geom_point()
 ```
+![scatter-plot-1](https://github.com/cikasm/cintia-s_portfolio/assets/139472104/3a9695d3-1a83-48dc-bd95-efc35b1d9ea9)
 
 I also indentified a generally linear relationship between minutes asleep and time in bed. As expected, more
 time in bed correlated with increased sleep duration. However, some participants showed unexpected trends,
