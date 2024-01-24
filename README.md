@@ -1,5 +1,5 @@
 # Data Analysis with R: Bellabeat Case Study
-Capstone project completed as part of the Google Data Analytics Certificate. 
+Capstone project completed as part of my Google Data Analytics Certificate. 
 
 ## Project Description
 
