@@ -32,3 +32,95 @@ EDA involved exploring the smart device fitness data to answer key questions, su
 * What is the relationship between range of daily step counts and sleep duration?  
 
 ### Data Analysis
+To analyze the data, I began by gathering some summary statistics and creating initial exploratory visualizations with the ggplot2 package:
+
+``` {r}
+n_distinct(Daily_Activity_Data$Id)
+[1] 0
+n_distinct(Sleep_Day$Id)
+[1] 0
+nrow(Daily_Activity_Data)
+[1] 940
+nrow(Sleep_Day)
+[1] 413
+```
+I examined the sample in the dataset and found that the 30 participants had a diverse range of daily step
+counts and sleep durations. However, there was a significant amount of sedentary time in their daily activities.
+I also observed differences in sleep patterns, with the majority having one sleep record and a fairly consistent
+sleep duration.
+``` {r}
+Daily_Activity_Data %>%
+select(Total_Steps,
+Total_Distance,
+Sedentary_Minutes) %>%
+summary()
+```
+`Total_Steps Total_Distance Sedentary_Minutes
+Min. : 0 Min. : 0.000 Min. : 0.0
+1st Qu.: 3790 1st Qu.: 2.620 1st Qu.: 729.8
+Median : 7406 Median : 5.245 Median :1057.5
+Mean : 7638 Mean : 5.490 Mean : 991.2
+3rd Qu.:10727 3rd Qu.: 7.713 3rd Qu.:1229.5
+Max. :36019 Max. :28.030 Max. :1440.0`
+
+``` {r}
+Sleep_Day %>%
+select(Total_Sleep_Records,
+Total_Minutes_Asleep,
+Total_Time_In_Bed) %>%
+summary()
+```
+`Total_Sleep_Records Total_Minutes_Asleep Total_Time_In_Bed
+Min. :1.000 Min. : 58.0 Min. : 61.0 1st Qu.:1.000 1st Qu.:361.0 1st Qu.:403.0
+Median :1.000 Median :433.0 Median :463.0`
+
+### Merging the datasets together
+After combining the datasets `Sleep_Day` and `Daily_Activity_Data`, I identified a pattern regarding the
+amount of time participants stay in bed and the number of steps taken; those who sleep more also take more
+steps.
+
+``` {r}
+combined_data <- merge(Sleep_Day, Daily_Activity_Data, by="User_ID")
+n_distinct(combined_data$Id)
+```
+``` {r}
+activity_sleep <- combined_data %>%
+select(Total_Minutes_Asleep, Total_Time_In_Bed, Total_Steps)
+head(activity_sleep)
+```
+
+### Data Visualization
+
+After gathering summary statistics, I created some exploratory visualizations using the ggplot2package.
+I noticed an inverse relationship between the number of steps taken in a day and the sedentary minutes. As
+the total steps increased, the sedentary minutes tended to decrease. This suggested that individuals who
+were more active in terms of steps were likely to spend less time in a sedentary state.
+
+``` {r}
+ggplot(data=Daily_Activity_Data, aes(x=Total_Steps, y=Sedentary_Minutes,
+color=Total_Steps)) + geom_point()
+```
+
+I also indentified a generally linear relationship between minutes asleep and time in bed. As expected, more
+time in bed correlated with increased sleep duration. However, some participants showed unexpected trends,
+spending extended time in bed with relatively lower minutes asleep.
+
+``` {r}
+ggplot(data=Sleep_Day, aes(x=Total_Minutes_Asleep, y=Total_Time_In_Bed)) + geom_point()
+```
+
+## Results 
+The daily activity data revealed a diverse range of step counts and distances, with a notable
+amount of sedentary time in participants. Sleep activity data, on the other hand, indicated variations in
+sleep records, minutes asleep, and time in bed, offering a snapshot of users’ sleep patterns. Understanding
+this inverse relationship between steps and sedentary minutes is crucial for Bellabeat’s marketing strategy.
+
+In terms of daily activity, Bellabeat’s team can customize marketing strategies for those with lower step counts
+by emphasizing the Leaf wellness tracker as a starting point to track their activity and sleep. Additionally,
+for those with higher step counts can benefit from messages highlighting the comprehensive analysis provided
+by The Bellabeat’s app to help them better understand their habits and make healthy decisions.
+
+### Recommendations
+To enrich the analysis, I would consider additional data on user demographics, such as age, gender, and
+fitness levels. This information can tailor insights to specific user groups, enhancing product personalization
+and marketing efforts.
