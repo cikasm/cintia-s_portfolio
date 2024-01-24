@@ -5,6 +5,11 @@
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Tools](#tools)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis](#data-analysis)
+- [Data Visualization](#data-visualization)
+- [Key Findings](#key-findings)
+- [Recommendations](#recommendations)
 
 ## Project Overview
 
@@ -79,7 +84,7 @@ summary()
 Min. :1.000 Min. : 58.0 Min. : 61.0 1st Qu.:1.000 1st Qu.:361.0 1st Qu.:403.0
 Median :1.000 Median :433.0 Median :463.0`
 
-### Merging the datasets together
+#### Merging the datasets together
 After combining the datasets `Sleep_Day` and `Daily_Activity_Data`, I identified a pattern regarding the
 amount of time participants stay in bed and the number of steps taken; those who sleep more also take more
 steps.
@@ -114,7 +119,7 @@ spending extended time in bed with relatively lower minutes asleep.
 ggplot(data=Sleep_Day, aes(x=Total_Minutes_Asleep, y=Total_Time_In_Bed)) + geom_point()
 ```
 
-## Results/Findings
+### Key Findings
 
 The daily activity data revealed a diverse range of step counts and distances, with a notable
 amount of sedentary time in participants. Sleep activity data, on the other hand, indicated variations in
