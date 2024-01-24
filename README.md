@@ -1,42 +1,38 @@
 # Data Analysis with R: Bellabeat Case Study
-This project is a part of the Google Data Analytics Certificate Programe. 
+Capstone project completed as part of the Google Data Analytics Certificate. 
 
-#### -- Project Status: [Completed]
+## Project Description
 
-## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+### Scenario
+Bellabeat is a high-tech manufacturer of health-focused products for women. Urška Sršen, co-founder and
+Chief Creative Officer, believes that analyzing smart device fitness data could help unlock new growth
+opportunities for the company. 
 
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
+As a data analyst, I was tasked with analyzing smart device usage data to gain insights into how consumers
+use non-Bellabeat smart devices. Finally, I should select one of Bellabeat’s products to apply these insights
+through a presentation with high-level recommendations for marketing strategy
+
+### Characters
+* Urška Sršen: Bellabeat’s co-founder and Chief Creative Officer
+* Sando Mur: Mathematician and Bellabeat’s co-founder; key member of the Bellabeat executive team
+* Bellabeat marketing analytics team: A team of data analysts responsible for collecting, analyzing,
+  and reporting data that helps guide Bellabeat’s marketing strategy.
 
 ### Methods Used
-* Inferential Statistics
-* Machine Learning
+* Descriptive Analysis
+* Data Cleaning
+* Data Aggregation
 * Data Visualization
-* Predictive Modeling
-* etc.
 
 ### Technologies
 * R 
-* Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
+* RStudio/RMarkdown
+* Tidyverse packages
 * HTML
-* JavaScript
-* etc. 
 
-## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
 
 ## Needs of this project
 
-- frontend developers
 - data exploration/descriptive statistics
 - data processing/cleaning
-- statistical modeling
 - writeup/reporting
-- etc. (be as specific as possible)
