@@ -1,9 +1,14 @@
 # Data Analysis with R: Bellabeat Case Study
-Capstone project completed as part of my Google Data Analytics Certificate
+
+### Table of Contents
+
+- [Project Overview](#project-overview)
+- [Data Sources](#data-sources)
+- [Tools](#tools)
 
 ## Project Overview
 
-The data analysis project aimed to analyze smart device fitness data to provide insights into how non-consumers of a high-tech manufacturer of health-focused products for women use smart devices. By analyzing various aspects of usage data, the business task was to identify trends, make data-driven recommendations, and inform the company's marketing strategy.
+Completed as part of my Google Data Analytics Certificate, this data analysis project aimed to analyze smart device fitness data to provide insights into how non-consumers of a high-tech manufacturer of health-focused products for women use smart devices. By analyzing various aspects of usage data, the business task was to identify trends, make data-driven recommendations, and inform the company's marketing strategy.
 
 ### Data Sources
 
@@ -109,7 +114,8 @@ spending extended time in bed with relatively lower minutes asleep.
 ggplot(data=Sleep_Day, aes(x=Total_Minutes_Asleep, y=Total_Time_In_Bed)) + geom_point()
 ```
 
-## Results 
+## Results/Findings
+
 The daily activity data revealed a diverse range of step counts and distances, with a notable
 amount of sedentary time in participants. Sleep activity data, on the other hand, indicated variations in
 sleep records, minutes asleep, and time in bed, offering a snapshot of users’ sleep patterns. Understanding
